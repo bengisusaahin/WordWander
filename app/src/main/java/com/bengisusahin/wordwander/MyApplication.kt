@@ -1,4 +1,4 @@
-package com.bengisusahin
+package com.bengisusahin.wordwander
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
