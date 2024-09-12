@@ -9,13 +9,16 @@ import javax.inject.Singleton
 class WordRepository @Inject constructor(
     private val wordDataSource: WordDataSource
 ) {
+    fun getAllWords(): List<Word> {
+        return wordDataSource.getWords()
+    }
 
-    private val allWords: List<Word> by lazy { wordDataSource.getWords() }
+    fun getLearnedWords(): List<Word> {
+        return wordDataSource.getWords().filter { it.isLearned }
+    }
 
-    fun getAllWords(): List<Word> = allWords
-
-    fun getLearnedWords(): List<Word> = allWords.filter { it.isLearned }
-
-    fun getUnlearnedWords(): List<Word> = allWords.filter { !it.isLearned }
+    fun getUnlearnedWords(): List<Word> {
+        return wordDataSource.getWords().filter { !it.isLearned }
+    }
 
 }
