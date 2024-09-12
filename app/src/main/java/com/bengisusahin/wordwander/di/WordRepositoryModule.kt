@@ -14,6 +14,12 @@ object WordRepositoryModule {
 
     @Provides
     @Singleton
+    fun provideDataSource() :WordDataSource {
+        return WordDataSource
+    }
+
+    @Provides
+    @Singleton
     fun provideWordRepository(
         wordDataSource: WordDataSource
     ): WordRepository {
