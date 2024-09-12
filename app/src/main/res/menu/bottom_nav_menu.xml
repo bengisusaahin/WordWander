@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/wordsFragment"
-        android:title="Words"
+        android:title="@string/words"
         android:icon="@drawable/ic_words" /> <!-- İkon dosyası eklemeyi unutmayın -->
     <item
         android:id="@+id/learnedWordsFragment"
-        android:title="Learned"
+        android:title="@string/learned"
         android:icon="@drawable/ic_learned" /> <!-- İkon dosyası eklemeyi unutmayın -->
 </menu>
