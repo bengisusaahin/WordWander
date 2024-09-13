@@ -36,10 +36,4 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bottomNavigation.setupWithNavController(navController)
     }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragmentContainer)
-        return navController.navigateUp() || super.onSupportNavigateUp()
-    }
-
 }

@@ -3,22 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FFFFFF"
+    android:background="@drawable/background_gradient"
     tools:context=".ui.detail.DetailFragment">
 
     <TextView
-        android:id="@+id/wordTextView"
+        android:id="@+id/textViewWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:text="@string/words"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="bold"
+        android:padding="8dp" />
 
     <TextView
-        android:id="@+id/meaningTextView"
+        android:id="@+id/textViewMeanings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLearned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/learned"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="12dp"
+        android:contextClickable="true"
+        android:backgroundTint="#80CECCCC"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:elevation="4dp"/>
 
 </LinearLayout>
