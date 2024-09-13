@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bengisusahin.wordwander.databinding.FragmentWordsBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,7 +32,10 @@ class WordsFragment : Fragment() {
         binding.wordsRecyclerView.layoutManager = LinearLayoutManager(context)
 
         viewModel.words.observe(viewLifecycleOwner) { words ->
-            binding.wordsRecyclerView.adapter = WordsAdapter(words)
+            binding.wordsRecyclerView.adapter = WordsAdapter(words) { word ->
+                val action = WordsFragmentDirections.actionWordsFragmentToDetailFragment(word)
+                findNavController().navigate(action)
+            }
         }
     }
 

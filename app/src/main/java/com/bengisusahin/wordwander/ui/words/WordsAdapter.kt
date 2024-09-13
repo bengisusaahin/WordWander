@@ -10,7 +10,8 @@ import com.bengisusahin.wordwander.data.model.Word
 import com.bengisusahin.wordwander.databinding.WordRecyclerRowBinding
 
 class WordsAdapter(
-    private val words: List<Word>
+    private val words: List<Word>,
+    private val onWordClickListener: (Word) -> Unit
 ) : RecyclerView.Adapter<WordsAdapter.WordViewHolder>() {
 
     class WordViewHolder(private val binding: WordRecyclerRowBinding ) : RecyclerView.ViewHolder(binding.root) {
@@ -27,7 +28,12 @@ class WordsAdapter(
     }
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-        holder.bind(words[position])
+        val word = words[position]
+        holder.bind(word)
+
+        holder.itemView.setOnClickListener {
+            onWordClickListener(word)
+        }
     }
 
     override fun getItemCount(): Int = words.size

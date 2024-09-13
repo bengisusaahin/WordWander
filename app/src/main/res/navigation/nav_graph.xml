@@ -18,5 +18,17 @@
         android:id="@+id/detailFragment"
         android:name="com.bengisusahin.wordwander.ui.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail">
+    <argument
+        android:name="word"
+        app:argType="com.bengisusahin.wordwander.data.model.Word" />
+        <action
+            android:id="@+id/action_detailFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnedWordsFragment"
+        android:name="com.bengisusahin.wordwander.ui.learned.LearnedFragment"
+        android:label="fragment_learned"
+        tools:layout="@layout/fragment_learned" />
 </navigation>
