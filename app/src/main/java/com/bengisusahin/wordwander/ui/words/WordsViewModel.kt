@@ -26,7 +26,7 @@ class WordsViewModel @Inject constructor(
     }
 
     private fun getAllWords() {
-        _words.value = wordRepository.getAllWords()
+        _words.value = wordRepository.getAllWords().shuffled()
     }
 
     private fun getLearnedWords() {
