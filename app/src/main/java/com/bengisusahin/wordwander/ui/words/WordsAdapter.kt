@@ -15,6 +15,7 @@ class WordsAdapter(
 
     class WordViewHolder(private val binding: WordRecyclerRowBinding ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(word: Word ) {
+            word.imageResId?.let { binding.wordImageView.setImageResource(it) }
             binding.wordTextView.text = word.word
             binding.meaningTextView.text = word.translations.joinToString(", ") { it.translatedWord }
         }
