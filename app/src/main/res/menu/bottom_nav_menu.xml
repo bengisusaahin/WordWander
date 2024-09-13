@@ -3,9 +3,9 @@
     <item
         android:id="@+id/wordsFragment"
         android:title="@string/words"
-        android:icon="@drawable/ic_words" /> <!-- İkon dosyası eklemeyi unutmayın -->
+        android:icon="@drawable/ic_words" />
     <item
         android:id="@+id/learnedWordsFragment"
         android:title="@string/learned"
-        android:icon="@drawable/ic_learned" /> <!-- İkon dosyası eklemeyi unutmayın -->
+        android:icon="@drawable/ic_learned" />
 </menu>

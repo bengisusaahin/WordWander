@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -67,6 +68,8 @@ dependencies {
     // Fragment
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.hilt.navigation.fragment)
-
-
+    // Navigation
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
 }
+
