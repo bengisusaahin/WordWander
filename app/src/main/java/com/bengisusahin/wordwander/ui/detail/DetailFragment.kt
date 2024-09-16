@@ -38,3 +38,42 @@ class DetailFragment : DialogFragment() {
     }
 
 }
+
+/*
+class DetailFragment : Fragment() {
+
+    private var _binding: FragmentDetailBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentDetailBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val word = arguments?.let {
+            DetailFragmentArgs.fromBundle(it).word
+        }
+
+        if (word != null) {
+            binding.textViewWord.text = word.word
+            binding.textViewMeanings.text = word.translations.joinToString(", ") { it.translatedWord }
+        }
+
+//        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+//            findNavController().popBackStack()
+//        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}
+ */
